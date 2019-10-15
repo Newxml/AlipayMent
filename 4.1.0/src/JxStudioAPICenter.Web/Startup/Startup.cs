@@ -15,6 +15,7 @@ using System.IO;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
+using Essensoft.AspNetCore.Payment.Alipay;
 
 namespace JxStudioAPICenter.Web.Startup
 {
@@ -42,6 +43,7 @@ namespace JxStudioAPICenter.Web.Startup
             });
             services.AddHttpClient();
 
+            services.AddAlipay();
 
             services.AddSwaggerGen(c =>
             {
